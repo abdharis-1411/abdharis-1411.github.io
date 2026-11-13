@@ -40,7 +40,7 @@ export const myProjects = [
       'Built with a Go (Fiber) API, a React + Ant Design CMS and a native mobile app for field reps, backed by PostgreSQL with FCM push, offline-first capture and strict per-tenant isolation.',
     href: '#',
     texture: '/textures/project/work1.mp4',
-    logo: '/assets/project-logo1.png',
+    logo: '/assets/ic-sfa.svg',
     logoStyle: {
       backgroundColor: '#13202F',
       border: '0.2px solid #17293E',
@@ -56,7 +56,7 @@ export const myProjects = [
       'Full stack: a Go API, a React CMS and an Expo (React Native) companion app on PostgreSQL.',
     href: '#',
     texture: '/textures/project/work2.mp4',
-    logo: '/assets/project-logo2.png',
+    logo: '/assets/ic-crm.svg',
     logoStyle: {
       backgroundColor: '#0E1F38',
       border: '0.2px solid #0E2D58',
@@ -72,13 +72,11 @@ export const myProjects = [
       'Rebuilt on React 19 + Vite + Tailwind CSS with an Express API, plus a live stock-ledger module.',
     href: '#',
     texture: '/textures/project/work3.mp4',
-    logo: '/assets/project-logo3.png',
+    logo: '/assets/ic-dashboard.svg',
     logoStyle: {
-      backgroundColor: '#60f5a1',
-      background:
-        'linear-gradient(0deg, #60F5A150, #60F5A150), linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(208, 213, 221, 0.8) 100%)',
-      border: '0.2px solid rgba(208, 213, 221, 1)',
-      boxShadow: '0px 0px 60px 0px rgba(35, 131, 96, 0.3)',
+      backgroundColor: '#0B2E24',
+      border: '0.2px solid #134E3A',
+      boxShadow: '0px 0px 60px 0px rgba(52, 211, 153, 0.35)',
     },
     spotlight: '/assets/spotlight3.png',
     tags: [reactTag, tsTag, twTag],
@@ -90,7 +88,7 @@ export const myProjects = [
       'Node/Express backend with a Vite + React admin and JWT auth behind nginx.',
     href: '#',
     texture: '/textures/project/work4.mp4',
-    logo: '/assets/project-logo4.png',
+    logo: '/assets/ic-jobs.svg',
     logoStyle: {
       backgroundColor: '#1C1A43',
       border: '0.2px solid #252262',
@@ -106,7 +104,7 @@ export const myProjects = [
       'React front end on a PostgreSQL-backed API.',
     href: '#',
     texture: '/textures/project/work5.mp4',
-    logo: '/assets/project-logo5.png',
+    logo: '/assets/ic-asset.svg',
     logoStyle: {
       backgroundColor: '#2A1816',
       border: '0.2px solid #36201D',
@@ -122,7 +120,7 @@ export const myProjects = [
       'Self-contained HTML/CSS/JS dashboards with custom data-viz, several exported to MP4 for executive presentations.',
     href: '#',
     texture: '/textures/project/work6.mp4',
-    logo: '/assets/project-logo1.png',
+    logo: '/assets/ic-cockpit.svg',
     logoStyle: {
       backgroundColor: '#13202F',
       border: '0.2px solid #17293E',
