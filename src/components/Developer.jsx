@@ -5,9 +5,13 @@ Files: developer.glb [981.62KB] > /Users/hsuwinlat/Desktop/jsm pj/threejscc-port
 */
 
 import React, { useEffect, useRef } from 'react';
+import * as THREE from 'three';
 import { useGraph } from '@react-three/fiber';
 import { useAnimations, useFBX, useGLTF } from '@react-three/drei';
 import { SkeletonUtils } from 'three-stdlib';
+
+// Sawo matang skin tint (multiplies the RPM skin texture). Tweak if too dark/light.
+const SKIN_TINT = '#c99a6e';
 
 const Developer = ({ animationName = 'idle', ...props }) => {
   const group = useRef();
@@ -36,6 +40,17 @@ const Developer = ({ animationName = 'idle', ...props }) => {
     return () => actions[animationName].fadeOut(0.5);
   }, [animationName]);
 
+  // Tint skin toward "sawo matang" (head + body share the RPM skin look)
+  useEffect(() => {
+    const tint = new THREE.Color(SKIN_TINT);
+    [materials.Wolf3D_Skin, materials.Wolf3D_Body].forEach((m) => {
+      if (m) {
+        m.color = tint;
+        m.needsUpdate = true;
+      }
+    });
+  }, [materials]);
+
   return (
     <group ref={group} {...props} dispose={null}>
       <primitive object={nodes.Hips} />
@@ -43,11 +58,6 @@ const Developer = ({ animationName = 'idle', ...props }) => {
         geometry={nodes.Wolf3D_Hair.geometry}
         material={materials.Wolf3D_Hair}
         skeleton={nodes.Wolf3D_Hair.skeleton}
-      />
-      <skinnedMesh
-        geometry={nodes.Wolf3D_Glasses.geometry}
-        material={materials.Wolf3D_Glasses}
-        skeleton={nodes.Wolf3D_Glasses.skeleton}
       />
       <skinnedMesh
         geometry={nodes.Wolf3D_Body.geometry}

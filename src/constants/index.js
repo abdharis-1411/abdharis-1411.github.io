@@ -14,11 +14,6 @@ export const navLinks = [
     name: 'Work',
     href: '#work',
   },
-  {
-    id: 4,
-    name: 'Contact',
-    href: '#contact',
-  },
 ];
 
 // Testimonials disembunyikan dulu — belum ada kutipan asli dari klien
